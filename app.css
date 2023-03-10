@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: inherit;
+}
+img {
+  width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #282c3f;
+}
+
+.container {
+  padding-inline: 1rem;
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 15px 40px -20px rgb(40 44 63 / 10%);
+  background-color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-block: 22px;
+  padding-inline: 1rem;
+  max-width: 1240px;
+  margin-inline: auto;
+  height: 80px;
+}
+
+.logo {
+  margin-right: auto;
+}
+.logo img {
+  width: 170px;
+  will-change: transform;
+  transition: all 0.15s linear;
+}
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+.nav-items {
+  display: flex;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.nav-link {
+  color: #3d4152;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 0 10px 30px;
+  transition: all 0.15s linear;
+}
+.nav-link:hover {
+  color: #fc8019;
+}
+
+@media (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+}
+
+/* Card start */
+
+.card {
+  padding: 20px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  overflow: hidden;
+  background-color: #fff;
+  max-width: 320px;
+  justify-self: center;
+}
+
+.card:hover {
+  border-color: #d3d5df;
+  box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+}
+.card-header {
+  overflow: hidden;
+}
+.card-img {
+  filter: contrast(95%) brightness(100%);
+  transition: all 0.15s linear;
+  will-change: transform;
+}
+
+.card-header:hover .card-img {
+  filter: contrast(105%) brightness(110%);
+  transform: scale(1.05);
+}
+
+.card-body {
+  margin-top: 14px;
+}
+.card-title {
+  font-size: 17px;
+  font-weight: 500;
+  word-break: break-word;
+}
+.card-tags {
+  color: #686b78;
+  font-size: 13px;
+  margin-top: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #535665;
+}
+
+.time {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.card-rating {
+  background-color: #48c479;
+  height: 20px;
+  width: 44px;
+  border-radius: 2px;
+  padding-top: 2px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 5px;
+}
+
+.card-rating svg {
+  margin-top: 1px;
+}
+
+.card-price {
+  font-size: 12px;
+  font-weight: 400;
+}
+.offer {
+  border-top: 1px solid #e9e9eb;
+  border-bottom: 1px solid #e9e9eb;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  color: #8a584b;
+  display: flex;
+  font-size: 13px;
+  gap: 4px;
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.offer-icon {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.card-footer {
+  text-align: center;
+  visibility: hidden;
+}
+
+.card:hover .card-footer {
+  visibility: visible;
+}
+
+.card-footer a {
+  color: #5d8ed5;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.card-footer a:hover {
+  color: #686b78;
+}
+
+/* add comma for every tags except last one */
+/* .tag:not(.tag:last-child):after {
+  content: ", ";
+} */
+
+/* Card end */
+
+.card-container {
+  padding-top: 1rem;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Search */
+
+.search-section {
+  background-color: #494d60;
+  color: white;
+  min-height: 287px;
+  padding-top: 80px;
+  padding-bottom: 1rem;
+}
+
+.search-section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.search-section-subtitle {
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.search-wrapper {
+  max-width: 430px;
+  height: 45px;
+  background-color: #fff;
+  display: flex;
+  color: #535665;
+  align-items: center;
+  padding-left: 20px;
+}
+.input-search {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  flex: 1;
+}
+
+.btn-search {
+  background-color: #fc8019;
+  border: 0;
+  text-transform: uppercase;
+  width: 116px;
+  font-weight: 700;
+  height: 100%;
+  cursor: pointer;
+  color: #fff;
+}
