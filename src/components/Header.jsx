@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Title = () => (
   <a href="/" className="logo">
     <img
@@ -31,10 +33,31 @@ const NavItems = () => (
   </ul>
 );
 
+// Practice feature
+
+const LogInLogOut = () => {
+  const [isLogedin, setIsLogin] = useState(false);
+
+  const toggleLogedin = () => {
+    setIsLogin((prev) => !prev);
+  };
+
+  return (
+    <div style={{ paddingInline: "1rem" }}>
+      {isLogedin ? (
+        <button onClick={toggleLogedin}>Log Out</button>
+      ) : (
+        <button onClick={toggleLogedin}>Login</button>
+      )}
+    </div>
+  );
+};
+
 const Navbar = () => (
   <nav className="navbar">
     <Title />
     <NavItems />
+    <LogInLogOut />
   </nav>
 );
 

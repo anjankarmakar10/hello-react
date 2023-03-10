@@ -2,7 +2,7 @@ import offerIcon from "../assets/icons/offer.svg";
 import starIcon from "../assets/icons/star.svg";
 import { IMAGE_CDN_URL } from "../contants";
 
-const ResturantCard = ({
+const RestaurantCard = ({
   cloudinaryImageId,
   name,
   cuisines,
@@ -63,4 +63,4 @@ const ResturantCard = ({
   );
 };
 
-export default ResturantCard;
+export default RestaurantCard;
